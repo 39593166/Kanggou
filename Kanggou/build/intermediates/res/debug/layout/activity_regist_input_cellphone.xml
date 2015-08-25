@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_16">
+
+    <EditText
+        android:id="@+id/reset_pw_user"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_96"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:hint="请输入用户名或者手机号码"
+        android:paddingLeft="@dimen/dimen_16"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_96"
+        android:layout_marginTop="@dimen/dimen_32"
+        android:weightSum="3">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_96"
+            android:layout_weight="2"
+            android:id="@+id/reset_pw_identifycode" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_96"
+            android:layout_weight="1"
+            android:text="获取验证码"
+            android:id="@+id/reset_pw_get_identifycode" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_96"
+        android:layout_marginTop="@dimen/dimen_48"
+        android:text="确认"
+        android:textColor="@android:color/white"
+        android:background="@color/base_color"
+        android:textSize="18sp"
+        android:id="@+id/reset_pw_check_identifycode" />
+</LinearLayout>
+<!-- From: file:/D:/android_project/AS/Kanggou/Kanggou/res/layout/activity_regist_input_cellphone.xml -->
