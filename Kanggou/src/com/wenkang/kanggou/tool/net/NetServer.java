@@ -42,11 +42,11 @@ public class NetServer {
     public static void apply(Request re, ApplyCallback callback) {
         if (re.getMethod() == Request.METHOD_GET) {
             Log.e("url", re.getUrl());
-            get(re.getGetParams(), callback);
+            get(re.getUrl(), callback);
         } else if (re.getMethod() == Request.METHOD_POST) {
             Log.e("请求地址：", re.getUrl());
-            Log.e("请求参数：", re.getPostParams().toString());
-            post(re.getUrl(), re.getPostParams(), callback);
+            Log.e("请求参数：", re.getParams().toString());
+            post(re.getUrl(), re.getParams(), callback);
         }
     }
 

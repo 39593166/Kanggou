@@ -7,7 +7,7 @@
     android:padding="@dimen/dimen_16">
 
     <EditText
-        android:id="@+id/reset_pw_user"
+        android:id="@+id/regist_user"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_96"
         android:layout_marginTop="@dimen/dimen_24"
@@ -23,7 +23,7 @@
         android:weightSum="3">
 
         <EditText
-            android:id="@+id/reset_pw_identifycode"
+            android:id="@+id/regist_identifycode"
             android:layout_width="0dp"
             android:layout_height="@dimen/dimen_96"
             android:layout_weight="2"
@@ -32,7 +32,7 @@
             android:maxLength="6" />
 
         <Button
-            android:id="@+id/reset_pw_get_identifycode"
+            android:id="@+id/regist_get_identifycode"
             android:layout_width="0dp"
             android:layout_height="@dimen/dimen_96"
             android:layout_weight="1"
@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/reset_pw_check_identifycode"
+        android:id="@+id/regist_check_identifycode"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_96"
         android:layout_marginTop="@dimen/dimen_48"

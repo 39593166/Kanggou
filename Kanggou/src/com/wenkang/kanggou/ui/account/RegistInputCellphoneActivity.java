@@ -1,15 +1,17 @@
 package com.wenkang.kanggou.ui.account;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.wenkang.kanggou.R;
 import com.wenkang.kanggou.ui.BaseActivity;
 
 
-public class RegistInputCellphoneActivity extends BaseActivity implements View.OnClickListener {
+public class RegistInputCellphoneActivity extends BaseActivity implements View.OnClickListener, RegistInputCellphoneView {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,28 +20,83 @@ public class RegistInputCellphoneActivity extends BaseActivity implements View.O
         findViews();
     }
 
-    private EditText resetPwUser;
-    private EditText resetPwIdentifycode;
-    private Button resetPwGetIdentifycode;
-    private Button resetPwCheckIdentifycode;
+    private EditText registUser;
+    private EditText registIdentifycode;
+    private Button registGetIdentifycode;
+    private Button registCheckIdentifycode;
 
+    /**
+     * Find the Views in the layout<br />
+     * <br />
+     * Auto-created on 2015-08-25 14:21:40 by Android Layout Finder
+     * (http://www.buzzingandroid.com/tools/android-layout-finder)
+     */
     private void findViews() {
-        resetPwUser = (EditText) findViewById(R.id.reset_pw_user);
-        resetPwIdentifycode = (EditText) findViewById(R.id.reset_pw_identifycode);
-        resetPwGetIdentifycode = (Button) findViewById(R.id.reset_pw_get_identifycode);
-        resetPwCheckIdentifycode = (Button) findViewById(R.id.reset_pw_check_identifycode);
+        registUser = (EditText) findViewById(R.id.regist_user);
+        registIdentifycode = (EditText) findViewById(R.id.regist_identifycode);
+        registGetIdentifycode = (Button) findViewById(R.id.regist_get_identifycode);
+        registCheckIdentifycode = (Button) findViewById(R.id.regist_check_identifycode);
 
-        resetPwGetIdentifycode.setOnClickListener(this);
-        resetPwCheckIdentifycode.setOnClickListener(this);
+        registGetIdentifycode.setOnClickListener(this);
+        registCheckIdentifycode.setOnClickListener(this);
     }
 
+    /**
+     * Handle button click events<br />
+     * <br />
+     * Auto-created on 2015-08-25 14:21:40 by Android Layout Finder
+     * (http://www.buzzingandroid.com/tools/android-layout-finder)
+     */
     @Override
     public void onClick(View v) {
-        if (v == resetPwGetIdentifycode) {
-
-        } else if (v == resetPwCheckIdentifycode) {
-
+        if (v == registGetIdentifycode) {
+            // Handle clicks for registGetIdentifycode
+        } else if (v == registCheckIdentifycode) {
+            // Handle clicks for registCheckIdentifycode
         }
     }
 
+
+    @Override
+    public String getInputCellphoneNum() {
+        return registUser.getText().toString().trim();
+    }
+
+    @Override
+    public String getInputIdentifyCode() {
+        return registIdentifycode.getText().toString().trim();
+    }
+
+    @Override
+    public void setButtonText() {
+        registGetIdentifycode.setText("获取验证码");
+    }
+
+    @Override
+    public void setButtonLastTime(int lastTime) {
+        registGetIdentifycode.setText(lastTime + "秒后获取");
+    }
+
+    @Override
+    public void TipsWrongCellphoneNum(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void TipsAreadySendMessage() {
+        Toast.makeText(this, "验证码已发送到您的手机，请注意查收", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void TipsWrongIdentifyCode(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void Sucess(String cellphoneNum, String identifyCode) {
+        Intent intent = new Intent(this, RegistInputPasswordActivity.class);
+        intent.putExtra("cellphoneNum", cellphoneNum);
+        intent.putExtra("identifyCode", identifyCode);
+        startActivity(intent);
+    }
 }

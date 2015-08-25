@@ -23,7 +23,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        presenter = new LoginPresenter();
+        presenter = new LoginPresenter(this);
         presenter.setLoginInfo(this);
         findViews();
     }

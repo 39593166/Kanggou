@@ -19,6 +19,10 @@ public class LoginPresenter extends BasePresenter {
     LoginView view;
     private User user;
 
+    public LoginPresenter(LoginView view) {
+        this.view = view;
+    }
+
     /**
      * 登陆
      */
