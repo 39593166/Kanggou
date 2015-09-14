@@ -127,4 +127,32 @@ public class NetServer {
         mQueue.add(jsonObjectRequest);
     }
 
+    protected static void post(String url,
+                               String stringObjectParams, final ApplyCallback callback) {
+        if (stringObjectParams == null) {
+            Log.e("requestParams", "null");
+        } else {
+            Log.e("requestParams", stringObjectParams);
+        }
+        MyStringRequest stringRequest = new MyStringRequest(Method.POST, url, stringObjectParams, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                callback.onReturned(response);
+            }
+
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                callback.NetFailed(error);
+            }
+        }) {
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Connection", "Keep-Alive");
+                return headers;
+            }
+        };
+        mQueue.add(stringRequest);
+    }
 }
