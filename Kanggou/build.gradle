@@ -5,6 +5,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
     compile 'com.jiechic.library:xUtils:2.6.14'
+    compile 'org.kie.modules:com-google-code-gson:6.3.0.CR1'
+    compile 'com.google.code.gson:gson:2.3.1'
 }
 
 android {

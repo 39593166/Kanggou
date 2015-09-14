@@ -1,4 +1,4 @@
-package com.wenkang.kanggou.ui.shopping;
+package com.wenkang.kanggou.ui_version_1.shopping;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;

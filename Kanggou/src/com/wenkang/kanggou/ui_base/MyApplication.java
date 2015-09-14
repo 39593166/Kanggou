@@ -1,4 +1,4 @@
-package com.wenkang.kanggou;
+package com.wenkang.kanggou.ui_base;
 
 import android.app.Application;
 import android.os.Environment;

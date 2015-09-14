@@ -1,25 +1,25 @@
-package com.wenkang.kanggou.ui.account;
+package com.wenkang.kanggou.ui_version_1.account;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.wenkang.kanggou.R;
-import com.wenkang.kanggou.ui.BaseActivity;
+import com.wenkang.kanggou.ui_base.base_act.BaseActivity;
 
 
-public class ResetPasswordInputNewPdActivity extends BaseActivity {
+public class ResetPasswordInputUserActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reset_password_input_new_pd);
+        setContentView(R.layout.activity_reset_password_input_user);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_reset_password_input_new_pd, menu);
+        getMenuInflater().inflate(R.menu.menu_reset_password_input_user, menu);
         return true;
     }
 

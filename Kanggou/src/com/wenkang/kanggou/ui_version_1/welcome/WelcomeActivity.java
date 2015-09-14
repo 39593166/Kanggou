@@ -1,4 +1,4 @@
-package com.wenkang.kanggou.ui.welcome;
+package com.wenkang.kanggou.ui_version_1.welcome;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.wenkang.kanggou.R;
-import com.wenkang.kanggou.ui.BaseActivity;
-import com.wenkang.kanggou.ui.shopping.MainActivity;
+import com.wenkang.kanggou.ui_base.base_act.BaseActivity;
+import com.wenkang.kanggou.ui_version_1.shopping.MainActivity;
 
 
 public class WelcomeActivity extends BaseActivity implements WelcomeView{

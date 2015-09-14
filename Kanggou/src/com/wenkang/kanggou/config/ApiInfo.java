@@ -12,6 +12,10 @@ public class ApiInfo implements Serializable {
     private int appVersion;
     private int sourceCode;
 
+    public ApiInfo(int actionCode) {
+        this.actionCode = actionCode;
+    }
+
     public int getActionCode() {
         return actionCode;
     }

@@ -1,4 +1,4 @@
-package com.wenkang.kanggou.ui.welcome;
+package com.wenkang.kanggou.ui_version_1.welcome;
 
 /**
  * Created by Lenovo on 2015/8/24.

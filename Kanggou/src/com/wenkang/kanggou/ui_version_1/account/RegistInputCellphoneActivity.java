@@ -1,4 +1,4 @@
-package com.wenkang.kanggou.ui.account;
+package com.wenkang.kanggou.ui_version_1.account;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.wenkang.kanggou.R;
-import com.wenkang.kanggou.ui.BaseActivity;
+import com.wenkang.kanggou.ui_base.base_act.BaseActivity;
+import com.wenkang.kanggou.ui_version_1.account.view.RegistInputCellphoneView;
 
 
 public class RegistInputCellphoneActivity extends BaseActivity implements View.OnClickListener, RegistInputCellphoneView {

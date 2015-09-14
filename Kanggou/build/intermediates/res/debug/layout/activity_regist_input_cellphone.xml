@@ -7,11 +7,12 @@
     android:padding="@dimen/dimen_16">
 
     <EditText
-        android:id="@+id/reset_pw_user"
+        android:id="@+id/regist_user"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_96"
         android:layout_marginTop="@dimen/dimen_24"
-        android:hint="请输入用户名或者手机号码"
+        android:hint="请输入手机号码"
+        android:inputType="phone"
         android:paddingLeft="@dimen/dimen_16"
         android:singleLine="true" />
 
@@ -22,27 +23,30 @@
         android:weightSum="3">
 
         <EditText
+            android:id="@+id/regist_identifycode"
             android:layout_width="0dp"
             android:layout_height="@dimen/dimen_96"
             android:layout_weight="2"
-            android:id="@+id/reset_pw_identifycode" />
+            android:inputType="number"
+            android:hint="请输入验证码"
+            android:maxLength="6" />
 
         <Button
+            android:id="@+id/regist_get_identifycode"
             android:layout_width="0dp"
             android:layout_height="@dimen/dimen_96"
             android:layout_weight="1"
-            android:text="获取验证码"
-            android:id="@+id/reset_pw_get_identifycode" />
+            android:text="获取验证码" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/regist_check_identifycode"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_96"
         android:layout_marginTop="@dimen/dimen_48"
+        android:background="@color/base_color"
         android:text="确认"
         android:textColor="@android:color/white"
-        android:background="@color/base_color"
-        android:textSize="18sp"
-        android:id="@+id/reset_pw_check_identifycode" />
+        android:textSize="18sp" />
 </LinearLayout>
 <!-- From: file:/D:/android_project/AS/Kanggou/Kanggou/res/layout/activity_regist_input_cellphone.xml -->
